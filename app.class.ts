@@ -1,6 +1,6 @@
 import { validate } from './validator.class';
 import { Usuario } from './usuario.class';
-import { Premio } from './producto.class';
+import { Premio } from './premio.class';
 
 
 

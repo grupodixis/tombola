@@ -11,11 +11,7 @@ export class view{
      * Metodos
      */
     private authRol (){
-        if (this.rolLevel in this.rol.getRol()){
-            return true;
-        }else{
-            return false;
-        }
+        return (this.rolLevel in this.rol.getRol());
     }
 
 }
