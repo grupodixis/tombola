@@ -6,37 +6,6 @@ import { Premio } from './premio.class';
 
 
 
-
-
-export class Comprador {
-    /**
-     * Atributos
-     */
-    private usuario: Usuario;
-    private compras:[{
-        producto:Premio,
-        participaciones: number []
-    }]
-    
-    constructor(){}
-}  
-
-export class Vendedor {
-    /**
-     * Atributos
-     */
-    private usuario: Usuario;
-    private cif: number;
-    private validator = new validate;
-    constructor(datos){
-        this.cif = this.validator.validCIF(datos.cif) ? datos.cif : 'invalido';
-    }
-    /**
-     * Metodos
-     */
-
-}
-
 export class Categoria {
 
 }

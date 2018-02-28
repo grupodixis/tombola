@@ -13,5 +13,5 @@ export class view{
     private authRol (){
         return (this.rolLevel in this.rol.getRol());
     }
-
+    
 }

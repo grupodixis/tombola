@@ -1,12 +1,14 @@
-import { Vendedor } from './app.class';
+import { Vendedor } from './vendedor.class';
+
+
 export class Premio {
     /**
      * Atributos
      */
+
     private nombre: string;
     private precio: number;
     private participacionesManual: number;
-    private cupo: number;
     private vendedor:Vendedor;
     
     /**
@@ -28,10 +30,34 @@ export class Premio {
     private precioParticipacion (){
         return Math.round((this.precio / 0.75) / this.participaciones()); 
     }
+
     private recaudacion () {
-        return this.cupo * this.precioParticipacion();
+        return this.vendidos() * this.precioParticipacion();
     }
+
+    private vendidos():number{
+        return this.numerosComprados.length;
+    } 
+    private numerosComprados (){
+        
+        return;
+    }
+
+    private cupoLibre():any {
+        let cupo;
+        for (let i = 1; i < this._participaciones; i++) {
+            if(i !in this.numerosComprados){
+                cupo.push(i);
+            }
+        }
+        return cupo;
+    }
+    /**
+     * Valores Aplicados
+     */
     private _participaciones = this.participaciones();
     private _precioParticipacion = this.precioParticipacion();
     private _recaudacion = this.recaudacion();
+    private _vendidos = this.vendidos();
+    private _numerosComprados = this.numerosComprados();
 }
