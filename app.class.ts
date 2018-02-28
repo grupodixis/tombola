@@ -18,3 +18,5 @@ export class Ls{
         localStorage.getItem(key);
     }
 } 
+
+

@@ -10,6 +10,7 @@ export class Premio {
     private precio: number;
     private participacionesManual: number;
     private vendedor:Vendedor;
+    private numerosComprados: number [];
     
     /**
      * Metodos
@@ -38,11 +39,7 @@ export class Premio {
     private vendidos():number{
         return this.numerosComprados.length;
     } 
-    private numerosComprados (){
-        
-        return;
-    }
-
+  
     private cupoLibre():any {
         let cupo;
         for (let i = 1; i < this._participaciones; i++) {
@@ -52,6 +49,9 @@ export class Premio {
         }
         return cupo;
     }
+    private comprar(participacion:number,){
+        this.numerosComprados.push(participacion);
+    }
     /**
      * Valores Aplicados
      */
@@ -59,5 +59,8 @@ export class Premio {
     private _precioParticipacion = this.precioParticipacion();
     private _recaudacion = this.recaudacion();
     private _vendidos = this.vendidos();
-    private _numerosComprados = this.numerosComprados();
+    constructor(){
+
+    }
+    
 }

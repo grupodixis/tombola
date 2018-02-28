@@ -1,4 +1,5 @@
 import { validate } from './validator.class';
+
 export class Usuario{
     /**
      * ATRIBUTOS
